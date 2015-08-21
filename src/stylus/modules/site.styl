@@ -1,72 +1,28 @@
 
 // all the big global in site
 body
- relative() 
+  font-size 14px
+  relative() 
+  background-color $grey-lighter
+
+
 
 .hidden
   display none
 
-.big-container
-  overflow hidden
-
-.main-content
-  left 0
-  width 100%
-  height 100%
-  overflow hidden
-  relative()
-  transition $slow-transition 
-  @media $xs-small
-    margin-top 0  
-  @media $small
-    margin-top 0  
-  @media $medium
-    margin-top 0  
-
-  @media $large 
-    margin-top 0  
-
-.content-container
-  clear()
-  clearfix()
-  relative()
-  margin                0 auto
-  padding               0 15px
-
- 
-  @media $xs-small
-    width 100%
-  @media $small
-    width 100%
-  @media $medium
-    width 950px
-
-  @media $large
-    padding 0
-    width 960px
- 
-.narrow-container
-  clear()
-  clearfix()
-  relative()
-  margin                0 auto
-  padding               0 15px
-
- 
-  @media $xs-small
-    width 100%
-  @media $small
-    width 80%
-  @media $medium
-    width 80%
-
-  @media $large
-    padding 0
-    width 70%
- 
 .collapsing 
     height 0
     overflow hidden
     transition  $fast-transition
- 
 
+.btn-verify
+    position absolute
+    right 0
+    top 0
+ //change bootstrap 
+.form-group
+  relative()
+.form-control 
+  border-radius 0
+.btn 
+  border-radius 0

@@ -17,6 +17,7 @@ path         = require "path"
 lr           = require("tiny-lr")()
 nib     = require("nib")
 fs      = require "fs"
+bootstrap = require "bootstrap-styl"
 # fontawesome  = require "font-awesome-stylus"
 
 pkg            = require "./package.json"
@@ -135,10 +136,11 @@ gulp.task "scripts", ->
 
 # Compile Stylus
 
+# .pipe plugins.stylus({use:nib(),compress:true})
 gulp.task "stylus", ->
     gulp.src Config.src + "stylus/main.styl"
     .pipe plugins.plumber()
-    .pipe plugins.stylus({use:nib(),compress:true})
+    .pipe plugins.stylus({use:bootstrap(),compress:true})
     .pipe plugins.autoprefixer "last 1 version", "> 1%"
     .pipe plugins.if Config.publish, plugins.minifyCss()
     .pipe plugins.rename "main.css"
@@ -328,7 +330,7 @@ gulp.task "deploy", ->
     run "copy-files"
 
 options = 
-  branch: "pages"
+  branch: "gh-pages"
 gulp.task "publish", ->
     gulp.src('./public/**/*').pipe(deploy(options))
 

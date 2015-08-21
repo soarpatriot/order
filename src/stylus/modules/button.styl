@@ -1,232 +1,149 @@
 
+
+
+
 $button-vertical-space = 6px
-
-.button 
-  relative()
-  background $white 
-  font-size 1em
-  font-weight 400
-  padding $button-vertical-space 1.4em
-  line-height 1.42857143
-  vertical-align middle
-  text-align center
-  text-shadow none
-  text-decoration none
-  white-space nowrap
+$button-border-radius-base = 0
+.btn
   display inline-block
-  border           1px solid transparent 
-  transition $fast-transition
-  
-  &:disabled
-    cursor        not-allowed
-    opacity       0.5
-  
-  &-black
-    padding $button-vertical-space 1.4em
-    background-color $black
-    color $white
-    +ActiveFocusHover()
-      color            $white          
+  margin-bottom 0 // For input.btn
+  font-weight $btn-font-weight
+  text-align center
+  vertical-align middle
+  touch-action manipulation
+  cursor pointer
+  background-image none // Reset unusual Firefox-on-Android default style see https://github.com/necolas/normalize.css/issues/214
+  border 1px solid transparent
+  white-space nowrap
+  button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, 0)
+  user-select none
 
-  &-dark-grey
-    padding $button-vertical-space 1.4em
-    background-color $grey-dark-light
-    color $white
-    +ActiveFocusHover()
-      color            $white          
-      background-color lighten( $grey-dark-light, 10%)
-  &-grey
-    padding $button-vertical-space 1.4em
-    background-color $grey
-    color $grey-dark
-    +ActiveFocusHover()
-      color $grey-dark
-      background-color darken(@background-color, 50%)
-  &-orange
-    padding $button-vertical-space 1.4em
-    background-color $mid-orange
-    color $white
-    +ActiveFocusHover()
-      color          $white
-      background-color $deep-orange
-  &-newline
-    white-space normal
+  &,
+  &:active,
+  &.active
+    &:focus,
+    &.focus
+      tab-focus()
 
+  &:hover,
+  &:focus,
+  &.focus
+    color $btn-default-color
+    text-decoration none
 
-  &-white
-    padding $button-vertical-space 1.4em
-    background-color white 
-    color            $grey-dark            
-    border           1px solid $grey-lighter
-    +ActiveFocusHover()
-      background-color darken( $white, 10%)
-      color            $grey-dark            
+  &:active,
+  &.active
+    outline 0
+    background-image none
+    box-shadow inset 0 3px 5px rgba(0, 0, 0, .125)
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] &
+    cursor $cursor-disabled
+    opacity-ie(.65)
+    box-shadow none
+
+  a&
+    &.disabled,
+    fieldset[disabled] &
+      pointer-events none // Future-proof disabling of clicks on `<a>` elements
 
 
-  &-blue 
-    padding $button-vertical-space 1.4em
-    background-color transparent 
-    color            $primary-color
-    border           1px solid $primary-color
-    +ActiveFocusHover()
-      background-color $primary-color 
-      color            $white
-  &-blue-solid
-      border-radius 2px
-      background-color $mid-blue 
-      color            $white
-      padding-left 40px
-      padding-right 40px
-      +ActiveFocusHover()
-        background-color $deep-blue 
-        color            $white
-  &-blue-dashed
-      border-radius 2px
-      background-color $grey-lighter 
-      color            $mid-blue
-      border $mid-blue 
-      padding-left 40px
-      padding-right 40px
-      +ActiveFocusHover()
-        color            $deep-blue
-        border $deep-blue
-  &-blue-trans
-      border-radius 2px
-      background-color transparent 
-      color            $white
-      border $white 
-      padding-left 40px
-      padding-right 40px
-      +ActiveFocusHover()
-        color            $deep-blue
-        border $deep-blue
-  &-white-dashed
-      border-radius 2px
-      background-color $white
-      color            $mid-blue
-      border $primary-grey
-      padding-left 40px
-      padding-right 40px
-      +ActiveFocusHover()
-        color            $deep-blue  
-  &-grey-blue
-    border 1px solid $grey-lighter
-    background-color $white 
-    color            $primary-color
-    padding-left 40px
-    padding-right 40px
-    +ActiveFocusHover()
-      color          $primary-color
-  &-blue-white
-    border 2px solid $mid-blue
-    background-color $white 
-    color            $mid-blue
-    +ActiveFocusHover()
-      color          $white
-      background-color $mid-blue  
-  
-  &-action
-    text-decoration underline
+// Alternate buttons
+// --------------------------------------------------
 
-  &-plain
-    background     transparent
-    color          $grey-dark
-    padding $button-vertical-space 1.4em
-    +ActiveFocusHover()
-      color          $grey-dark
-      background-color darken($white,10%) 
- 
-  &-rounded
-    border-radius 5px
+.btn-default
+  button-variant($btn-default-color, $btn-default-bg, $btn-default-border)
 
-  
-  /*
-    &-rounded
-      background      $white
-      border          1px solid $primary-color    
-      border-radius(5px)
-      color           $primary-color
-      font-size       0.9em
-      &:active,
-      &:hover
-        background   darken($white,10%) 
-      &:focus
-        outline       none 
-      &.active 
-        background    $white 
-  */     
-  &-block
-    display block
-    width   100%
-  &-hamberge
-    padding 0 7px
-    color $primary-color
-  &-greylighter
-    background $grey-lighter
-  &-shop
-    padding $button-vertical-space 1.4em
-    background-color $mid-blue
-    color $white
-    span 
-      padding-left 10px
-    +ActiveFocusHover()
-      color          $white
-      background-color $deep-blue
-  &-contact
-    padding $button-vertical-space 1.4em
-    background-color $mid-blue
-    color $white
-    span 
-      padding-left 10px
-    +ActiveFocusHover()
-      color          $mid-blue
-      background-color $background-grey
-  &-bluewhite
-    padding $button-vertical-space 1.4em
-    background-color $mid-blue
-    color $white
-    span 
-      padding-left 10px
-    +ActiveFocusHover()
-      color          $mid-blue
-      background-color $white   
-  &-doctor
-    padding $button-vertical-space 1.4em
-    background-color $mid-green
-    color $white
-    span 
-      padding-left 10px
-    +ActiveFocusHover()
-      color          $white
-      background-color $deep-green
-  &-locate
-    padding $button-vertical-space 1.4em
-    background-color $mid-orange
-    color $white
-    span 
-      padding-left 10px
-    +ActiveFocusHover()
-      color          $white
-      background-color $deep-orange
+.btn-primary
+  button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border)
 
-  &-m-s
-    margin 5px 10px
-   
-.button-group
-  .button 
-    margin 10px 5px
+// Success appears as green
+.btn-success
+  button-variant($btn-success-color, $btn-success-bg, $btn-success-border)
 
-.link
-  &-inline
-    display inline-block
-  &-block
-    display block
-  &-grey 
-    color $primary-grey
-    padding 5px 0
-    +ActiveFocusHover()
-      color $primary-color
-      text-decoration underline
+// Info appears as blue-green
+.btn-info
+  button-variant($btn-info-color, $btn-info-bg, $btn-info-border)
 
+// Warning appears as orange
+.btn-warning
+  button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border)
+
+// Danger and error appear as red
+.btn-danger
+  button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border)
+
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link
+  color $link-color
+  font-weight normal
+  border-radius 0
+
+  &,
+  &:active,
+  &.active,
+  &[disabled],
+  fieldset[disabled] &
+    background-color transparent
+    box-shadow none
+
+  &,
+  &:hover,
+  &:focus,
+  &:active
+    border-color transparent
+
+  &:hover,
+  &:focus
+    color $link-hover-color
+    text-decoration $link-hover-decoration
+    background-color transparent
+
+  &[disabled],
+  fieldset[disabled] &
+    &:hover,
+    &:focus
+      color $btn-link-disabled-color
+      text-decoration none
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-lg
+  // line-height ensure even-numbered height of button next to large input
+  button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large)
+
+.btn-sm
+  // line-height ensure proper height of button next to small input
+  button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small)
+
+.btn-xs
+  button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small)
+
+
+// Block button
+// --------------------------------------------------
+
+.btn-block
+  display block
+  width 100%
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block
+  margin-top 5px
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"]
+  &.btn-block
+    width 100%
 
 

@@ -7,19 +7,12 @@ $slow-transition =        0.8s all ease-in-out
 $red-heavy = #a94442
 $primary-grey = #666
 $primary-color = #0079aa // #336ca6
-$dark-primary-color = darken( $primary-color, 15%)
-$heavy-dark-primary-color = darken( $primary-color, 30%)
  
 $grey-lighter  = #eee
-
 $grey = #e4e1de
-
 $grey-dark-light = #242424
-
 $grey-dark     = #464646 
-
 $border-grey = #bebebe
-
 $grey-middle = #e7e7e7
 
 $black =                #000000
@@ -27,17 +20,12 @@ $dark-black =           #333333
 $white =                #ffffff
 
 $input-border = #D9D9D9
-
 $x-light-grey = #f8f8f8
-
 $light-grey = #f7f7f7
 
 $deep-blue = #003b71
-
 $mid-blue = #006ba6
-
 $another-blue = #0079aa
-
 $light-blue = #90cef1
 
 $deep-teal = #008080
@@ -79,82 +67,5 @@ $light-aqua = #eaf7ff
 $dark-chalk = #585858
 
 
-$foot-background = rgb(207,207,207)
-
-$background-grey = rgb(247,247,247)
 
 
-
-$footer-color = $dark-chalk
-
-$body-background =        $white
-$body-text-colour =        $grey-dark
-$headings-colour =        $black
-
-// LAYOUT
-
-$base-spacing-unit =    20px
-$border-radius =        0.25em
-
-$heading-line-height =  1.1
-$line-height-computed = 20px
-
-
-//== Media queries breakpoints
-//
-//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
-
-// Extra small screen / phone
-//** Deprecated `$screen-xs` as of v3.0.1
-$screen-xs ?=                480px
-//** Deprecated `$screen-xs-min` as of v3.2.0
-$screen-xs-min ?=            $screen-xs
-//** Deprecated `$screen-phone` as of v3.0.1
-$screen-phone ?=             $screen-xs-min
-
-// Small screen / tablet
-//** Deprecated `$screen-sm` as of v3.0.1
-$screen-sm ?=                768px
-$screen-sm-min ?=            $screen-sm
-//** Deprecated `$screen-tablet` as of v3.0.1
-$screen-tablet ?=            $screen-sm-min
-
-// Medium screen / desktop
-//** Deprecated `$screen-md` as of v3.0.1
-$screen-md ?=                960px //992px
-$screen-md-min ?=            $screen-md
-//** Deprecated `$screen-desktop` as of v3.0.1
-$screen-desktop ?=           $screen-md-min
-
-// Large screen / wide desktop
-//** Deprecated `$screen-lg` as of v3.0.1
-$screen-lg ?=                1200px
-$screen-lg-min ?=            $screen-lg
-//** Deprecated `$screen-lg-desktop` as of v3.0.1
-$screen-lg-desktop ?=        $screen-lg-min
-
-// So media queries don't overlap when required, provide a maximum
-$screen-xs-max ?=            ($screen-sm-min - 1)
-$screen-sm-max ?=            ($screen-md-min - 1)
-$screen-md-max ?=            ($screen-lg-min - 1)
-
-
-
-// $small-bp =                "(min-width: 320px)"
-// $small-bp-retina =        "(min-width: 640px) and (-webkit-min-device-pixel-ratio: 2) and (min--moz-device-pixel-ratio: 2) and (-o-min-device-pixel-ratio: 2/1) and (min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (min-resolution: 2dppx)"
-// $medium-bp =            "(min-width: 768px)"
-// $large-bp =                "(min-width: 1280px)"
-
-$mobile-md      = "(max-width: 667px)" 
-$mobile       = "(max-width: $screen-sm-min)" 
-$xs-small       = "(max-width: $screen-xs-max)"    
-$small       = "(min-width:$screen-sm-min) and (max-width: $screen-sm-max)"    
-$medium      = "(min-width: $screen-md-min) and (max-width: $screen-md-max)"
-$large      = "(min-width: $screen-lg-min)"
-
-
-// TYPOGRAPHY
-
-@import                    "fonts"
-
-$body-font =            "Gotham Book",Verdana,Avenir;
