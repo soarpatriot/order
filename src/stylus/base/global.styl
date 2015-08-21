@@ -1,0 +1,161 @@
+
+*
+    box-sizing            border-box !important
+
+
+.container-fluid
+    clearfix()
+    relative()
+    margin                0 auto
+    padding               0
+    width                100%
+
+
+.container
+    clear()
+    clearfix()
+    relative()
+    margin                0 auto
+    padding               0 15px
+
+
+    @media $xs-small
+      width 100%
+    @media $small
+      width 100%
+    @media $medium
+      width 100%
+
+    @media $large
+      padding 0
+      width 1170px
+
+.row
+    clearfix()
+    row(12)
+    
+.clear 
+  clearfix()
+
+.center-block
+  display block
+  relative()
+  margin 10px auto
+
+.margin
+    margin                $base-spacing-unit
+
+    &--bottom
+        add-margin(bottom)
+
+    &--left
+        add-margin(left)
+
+    &--right
+        add-margin(right)
+
+    &--top
+        add-margin(top)
+
+.padding
+    padding                $base-spacing-unit
+
+    &--bottom
+        add-padding(bottom)
+
+    &--left
+        add-padding(left)
+
+    &--right
+        add-padding(right)
+
+    &--top
+        add-padding(top)
+
+.small
+    &-hidden
+        @media ( max-width: $screen-xs-max)
+            display        none !important
+    &-show
+      display none
+      @media ( max-width: $screen-xs-max)
+         display   block !important
+.medium
+    &-hidden
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max )
+            display        none !important
+
+.large
+    &-hidden
+        @media ( min-width: $screen-md-min)
+            display        none !important
+
+
+h1,h2,h3,h4,h5,h6
+  line-height $heading-line-height
+
+h1,h2,h3
+  margin-top $line-height-computed
+  margin-bottom ($line-height-computed / 2)
+
+h4,h5,h6
+  margin-top  ($line-height-computed / 2)
+  margin-bottom ($line-height-computed / 2)
+
+h1
+  font-family 'Gotham Light'
+  font-size 40px
+  line-height 48px
+  color $deep-blue
+  @media $xs-small
+    font-size 24px
+    line-height 28px
+    color #004681
+
+h2
+  font-family 'Gotham Light'
+  font-size 30px
+  line-height 38px
+  color $black
+  @media $xs-small
+    font-size 20px
+    line-height 28px
+
+h3
+  font-family 'Gotham Medium'
+  font-size 24px
+  line-height 34px
+  color $mid-blue
+  @media $xs-small
+    font-family 'Gotham Book'
+    font-size 20px
+    line-height 28px
+    color $black
+
+h4
+  font-family 'Gotham Book'
+  font-size 20px
+  line-height 24px
+  color $black
+  @media $xs-small
+    font-size 16px
+
+h5
+  font-family 'Gotham Medium'
+  font-size 16px
+  line-height 22px
+  color $black
+  @media $xs-small
+    font-size 14px
+
+h6
+  font-size  12px
+
+.f12
+    f12()
+
+.f18
+    f18()
+
+.f20
+    f20()

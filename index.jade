@@ -1,0 +1,36 @@
+doctype
+html(lang="en")
+
+
+    include ./src/jade/includes/header
+    link(rel="stylesheet", href="./public/styles/main.css")
+    style. 
+     .custom-container{
+        margin: 50px auto;
+        text-align: left;
+        width: 90%; 
+      }
+      .page-list{
+        list-style: none;
+      }
+
+      .page-list li{
+        margin: 10px 20px;
+        padding: 10px 20px;
+        background: #f7f7f9; 
+        border: 1px solid #e1e1e8;
+      }
+      .link{
+        margin: 10px 40px;
+      }
+   body
+      .container.custom-container
+        p.f20 Site Navation
+        ul.page-list  
+          - for file,index in fileArray  
+            li
+                | #{index+1} &nbsp;&nbsp;&nbsp;
+                a(href="#{file.filePath}",class="link") #{file.filePath} 
+
+
+  

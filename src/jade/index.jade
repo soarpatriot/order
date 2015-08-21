@@ -1,0 +1,111 @@
+extends templates/master
+
+block vars
+
+block title
+  | Home - Kp b to b
+
+block styles
+
+block content
+  section.homepage
+      section.first-block.promos
+        .hero-img
+          img(src="./images/_0024_0.0_HOME_Hero.jpg", alt="homepage")
+          a.down-icon(href="#down-arrow",role="button")
+            span.fa.fa-angle-down
+            .sr-only Next Section
+        .promos-content
+          .kit-middle
+            .kit-middle-content.centered
+              h1 A better way to take care of business
+              p Meeting today`s most pressing business challenges often comes down to making better choices.
+              a(href="#") See the KP Difference >
+      .content-container.centered
+        .save-down
+          a(href="#",role="button",class="save-item-button",data-item-id="home",data-item-name="home page")
+            span.fa.fa-bookmark-o
+            span.save-text &nbsp;Save
+        p.lead Choosing a health care partner is one of the most important business decisions you can make. Kaiser Permanente can help you manage costs, invest in the health of your employees, and bulid a healthier future for your employees and your business. Choose Better. Choose Kaiser Permanente.
+      section.fourth-block
+        .content-container
+          .fourth-pic
+            .fourth-left.l-2-3.s-1
+              img(src="./images/0.0_HOME_Content_1.jpg", alt="Shop our plans")
+            .norm-text.l-1-3.s-1.text
+              p Shop our plans
+              .norm-hr
+                hr
+              .norm-p
+                p With a full suite of options, we`ve got plans to fit your business, whether it`s large, small, or in between.
+              a(href="#") Learn more >
+      section.fourth-block
+        .content-container
+          .kiwi-grid
+            .kiwi-col.l-2-3.s-1
+              img(src="./images/0.0_HOME_Content_2.jpg", alt="Help your employees thrive at work")
+            .norm-text.l-1-3.s-1.text
+              p Help your employees thrive at work
+              .norm-hr
+                hr
+              .norm-p
+                p Creating a culture of health care costs and increase job satisfaction.
+              a(href="#") Learn more >   
+      section.fourth-block
+        .content-container
+          .fourth-pic
+            .fourth-left.l-2-3.s-1
+              img(src="./images/0.0_HOME_Content_3.jpg", alt="Gain insights")
+            .norm-text.l-1-3.s-1.text
+              p Gain insights
+              .norm-hr
+                hr
+              .norm-p
+                p Find expertise on topics ranging from care delivery to workforce health.
+              a(href="#") Learn more >
+      section.explore
+        .container
+          .content-container.centered
+            h2 What do you want to explore?
+            .explore-text.l-1-3.s-1
+              .explore-border
+                span.explore-blue Find care near you
+                a.a-find(href="https://healthy.kaiserpermanente.org/health/care/consumer/locate-our-services/doctors-and-locations?searchtype=doctors",target="_blank") Find a Doctor &nbsp;&nbsp;&nbsp;
+                a(href="#") Locate service >
+            .explore-text.l-1-3.s-1
+              .explore-border
+                span.explore-orange Manage costs
+                a(href="#") Choose a better way >
+            .explore-text.l-1-3.s-1
+              .explore-border
+                span.explore-green Understand electronic health records
+                a(href="#") Learn more >
+      .container
+        .content-container
+          section.satisfaction
+            h2.centered Highest member satisfaction¹
+            .satisfaction-text
+              .satisfaction-left.l-1-4.s-1-2
+                img(src="./images/kp04.png",alt="Highest member satisfaction")
+              .satisfaction-right.l-3-4.s-1
+                p Our commitment to quality care and service shows -- with top member satisfaction ratings for coverage and benefits, provider choice, customer service, information and communication, and claims processing -- in California, Colorado, and the Northwest, Mid-Atlantic and South Atlantic regions (including Georgia).
+            hr
+            .satisfaction-p
+              p ¹J.D. Power 2015 Member Health Plan Study.
+      .social.fifth-block.small-hidden
+        .container
+          h4 Stay up-to-date with Kaiser Permanente
+          .social-container
+            a(href="#") 
+              .social-icon
+                span.fa.fa-linkedin
+              p.social-text
+                | LINKEDIN
+          .social-container
+            a(href="#") 
+              .social-icon
+                span.fa.fa-youtube
+              p.social-text
+                | YOUTUBE
+
+    

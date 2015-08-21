@@ -1,0 +1,232 @@
+
+$button-vertical-space = 6px
+
+.button 
+  relative()
+  background $white 
+  font-size 1em
+  font-weight 400
+  padding $button-vertical-space 1.4em
+  line-height 1.42857143
+  vertical-align middle
+  text-align center
+  text-shadow none
+  text-decoration none
+  white-space nowrap
+  display inline-block
+  border           1px solid transparent 
+  transition $fast-transition
+  
+  &:disabled
+    cursor        not-allowed
+    opacity       0.5
+  
+  &-black
+    padding $button-vertical-space 1.4em
+    background-color $black
+    color $white
+    +ActiveFocusHover()
+      color            $white          
+
+  &-dark-grey
+    padding $button-vertical-space 1.4em
+    background-color $grey-dark-light
+    color $white
+    +ActiveFocusHover()
+      color            $white          
+      background-color lighten( $grey-dark-light, 10%)
+  &-grey
+    padding $button-vertical-space 1.4em
+    background-color $grey
+    color $grey-dark
+    +ActiveFocusHover()
+      color $grey-dark
+      background-color darken(@background-color, 50%)
+  &-orange
+    padding $button-vertical-space 1.4em
+    background-color $mid-orange
+    color $white
+    +ActiveFocusHover()
+      color          $white
+      background-color $deep-orange
+  &-newline
+    white-space normal
+
+
+  &-white
+    padding $button-vertical-space 1.4em
+    background-color white 
+    color            $grey-dark            
+    border           1px solid $grey-lighter
+    +ActiveFocusHover()
+      background-color darken( $white, 10%)
+      color            $grey-dark            
+
+
+  &-blue 
+    padding $button-vertical-space 1.4em
+    background-color transparent 
+    color            $primary-color
+    border           1px solid $primary-color
+    +ActiveFocusHover()
+      background-color $primary-color 
+      color            $white
+  &-blue-solid
+      border-radius 2px
+      background-color $mid-blue 
+      color            $white
+      padding-left 40px
+      padding-right 40px
+      +ActiveFocusHover()
+        background-color $deep-blue 
+        color            $white
+  &-blue-dashed
+      border-radius 2px
+      background-color $grey-lighter 
+      color            $mid-blue
+      border $mid-blue 
+      padding-left 40px
+      padding-right 40px
+      +ActiveFocusHover()
+        color            $deep-blue
+        border $deep-blue
+  &-blue-trans
+      border-radius 2px
+      background-color transparent 
+      color            $white
+      border $white 
+      padding-left 40px
+      padding-right 40px
+      +ActiveFocusHover()
+        color            $deep-blue
+        border $deep-blue
+  &-white-dashed
+      border-radius 2px
+      background-color $white
+      color            $mid-blue
+      border $primary-grey
+      padding-left 40px
+      padding-right 40px
+      +ActiveFocusHover()
+        color            $deep-blue  
+  &-grey-blue
+    border 1px solid $grey-lighter
+    background-color $white 
+    color            $primary-color
+    padding-left 40px
+    padding-right 40px
+    +ActiveFocusHover()
+      color          $primary-color
+  &-blue-white
+    border 2px solid $mid-blue
+    background-color $white 
+    color            $mid-blue
+    +ActiveFocusHover()
+      color          $white
+      background-color $mid-blue  
+  
+  &-action
+    text-decoration underline
+
+  &-plain
+    background     transparent
+    color          $grey-dark
+    padding $button-vertical-space 1.4em
+    +ActiveFocusHover()
+      color          $grey-dark
+      background-color darken($white,10%) 
+ 
+  &-rounded
+    border-radius 5px
+
+  
+  /*
+    &-rounded
+      background      $white
+      border          1px solid $primary-color    
+      border-radius(5px)
+      color           $primary-color
+      font-size       0.9em
+      &:active,
+      &:hover
+        background   darken($white,10%) 
+      &:focus
+        outline       none 
+      &.active 
+        background    $white 
+  */     
+  &-block
+    display block
+    width   100%
+  &-hamberge
+    padding 0 7px
+    color $primary-color
+  &-greylighter
+    background $grey-lighter
+  &-shop
+    padding $button-vertical-space 1.4em
+    background-color $mid-blue
+    color $white
+    span 
+      padding-left 10px
+    +ActiveFocusHover()
+      color          $white
+      background-color $deep-blue
+  &-contact
+    padding $button-vertical-space 1.4em
+    background-color $mid-blue
+    color $white
+    span 
+      padding-left 10px
+    +ActiveFocusHover()
+      color          $mid-blue
+      background-color $background-grey
+  &-bluewhite
+    padding $button-vertical-space 1.4em
+    background-color $mid-blue
+    color $white
+    span 
+      padding-left 10px
+    +ActiveFocusHover()
+      color          $mid-blue
+      background-color $white   
+  &-doctor
+    padding $button-vertical-space 1.4em
+    background-color $mid-green
+    color $white
+    span 
+      padding-left 10px
+    +ActiveFocusHover()
+      color          $white
+      background-color $deep-green
+  &-locate
+    padding $button-vertical-space 1.4em
+    background-color $mid-orange
+    color $white
+    span 
+      padding-left 10px
+    +ActiveFocusHover()
+      color          $white
+      background-color $deep-orange
+
+  &-m-s
+    margin 5px 10px
+   
+.button-group
+  .button 
+    margin 10px 5px
+
+.link
+  &-inline
+    display inline-block
+  &-block
+    display block
+  &-grey 
+    color $primary-grey
+    padding 5px 0
+    +ActiveFocusHover()
+      color $primary-color
+      text-decoration underline
+
+
+

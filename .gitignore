@@ -1,0 +1,12 @@
+.idea/*
+/src/lib
+.DS_Store
+/bower_components/*
+node_modules
+npm-debug.log
+*.*.swp
+*.swp
+
+/public
+*.map
+/bb-kpb2b/*

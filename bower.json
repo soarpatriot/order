@@ -1,0 +1,22 @@
+{
+  "name": "kp",
+  "version": "0.0.0",
+  "authors": [
+    "Soar"
+  ],
+  "description": "Front-End",
+  "main": "public/index.html",
+  "keywords": [],
+  "license": "Copyright Danone",
+  "private": true,
+  "dependencies": {
+    "font-awesome-stylus": "~4.3.0",
+    "bootstrap": "~3.3.4",
+    "parsleyjs": "~2.1.3",
+    "bootstrap-validator": "~0.9.0"
+  },
+  "devDependencies": {
+    "jquery": "~1.11.2",
+    "modernizr": "~2.8.3"
+  }
+}

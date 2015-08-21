@@ -1,0 +1,133 @@
+// Interaction
+
+ActiveFocusHover()
+    &.active
+    &:active,
+    &:focus,
+    &:hover
+        {block}
+
+// Layout
+
+display-inline(pos)
+  display inline
+  display inline-block 
+  vertical-align pos 
+  
+
+add-margin(direction)
+    margin-{direction}            $base-spacing-unit !important
+    
+add-padding(direction)
+    padding-{direction}            $base-spacing-unit !important
+
+clear()
+    clear                         both
+
+clearfix()
+    *zoom:1
+
+    &:before,
+    &:after
+        content                    ""
+        display                    table
+
+    &:after
+        clear                    both
+
+fl()
+    float                        left
+    
+fr()
+    float                        right
+
+.pull-right
+  fr()
+.group
+    clearfix()
+
+relative()
+    position                    relative
+
+f20()
+    font-size                   20px
+    line-height                 30px
+f18()
+    font-size                   18px
+    line-height                 28px
+f12()
+    font-size                   12px
+    line-height                 18px
+
+
+
+// Typography
+
+inline-list()
+    li
+        display                    inline-block
+        margin-left                -4px
+        
+        &:first-of-type
+            margin-left            0
+
+unstyled-list()
+    list-style                    none
+    margin                        0
+    padding                        0
+
+
+perspective($perspective)
+  -webkit-perspective $perspective
+  // -moz-perspective $perspective
+  perspective $perspective
+
+backface-visibility($visibility)
+  -webkit-backface-visibility $visibility
+  -moz-backface-visibility $visibility
+  backface-visibility $visibility
+
+
+transition-transform($transition)
+  -webkit-transition -webkit-transform $transition
+  -moz-transition -moz-transform $transition
+  -o-transition -o-transform $transition
+  transition transform $transition
+
+img-responsive($display = block)
+  display $display
+  max-width 100% // Part 1 Set a maximum relative to the parent
+  height auto // Part 2 Scale the height according to the width, otherwise you get stretching
+
+img-retina($file-1x, $file-2x, $width-1x, $height-1x)
+  background-image url("{$file-1x}")
+
+  @media
+  //only screen and (-webkit-min-device-pixel-ratio 2),
+  //only screen and (min--moz-device-pixel-ratio 2),
+  //only screen and (-o-min-device-pixel-ratio 2/1),
+  only screen and (min-device-pixel-ratio 2),
+  only screen and (min-resolution 192dpi),
+  only screen and (min-resolution 2dppx)
+    background-image url("{$file-2x}")
+    background-size $width-1x $height-1x
+
+
+opacity-ie($opacity)
+  opacity $opacity
+  // IE8 filter
+  $opacity-ie = ($opacity * 100)
+  filter s('alpha(opacity=%s)', $opacity-ie)
+
+
+// Horizontal gradient, from left to right
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+// Color stops are not available in IE9 and below.
+gradient-horizontal($start-color = #555, $end-color = #333, $start-percent = 0%, $end-percent = 100%)
+  //background-image -webkit-linear-gradient(left, $start-color $start-percent, $end-color $end-percent) // Safari 5.1-6, Chrome 10+
+  //background-image -o-linear-gradient(left, $start-color $start-percent, $end-color $end-percent) // Opera 12
+  background-image linear-gradient(to right, $start-color $start-percent, $end-color $end-percent) // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat repeat-x
+  filter s("progid:DXImageTransform.Microsoft.gradient(startColorstr='%s', endColorstr='%s', GradientType=1)", argb($start-color), argb($end-color)) // IE9 and down
+
