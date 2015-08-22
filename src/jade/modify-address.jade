@@ -1,0 +1,32 @@
+extends templates/master
+
+block vars
+
+block title
+  | 手机号查询
+
+block styles
+
+block content
+  .container 
+    .address-form
+      form(class="form-horizontal")
+        .form-group
+          label(class="col-xs-3 control-label") 姓名： 
+          .col-xs-9
+            input(type="text",class="form-control")
+        .form-group
+          label(class="col-xs-3 control-label") 手机号： 
+          .col-xs-9
+            input(type="text",class="form-control")
+        .form-group
+          label(class="col-xs-3 control-label") 详细地址： 
+          .col-xs-9
+            textarea(class="form-control",row="3")
+        .search-area 
+          .row 
+            .col-xs-6
+              button(class="btn  btn-grey btn-block") 删除
+            .col-xs-6
+              button(class="btn  btn-danger btn-block") 确定
+

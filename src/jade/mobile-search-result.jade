@@ -1,0 +1,81 @@
+extends templates/master
+
+block vars
+
+block title
+  | 手机号结果列表
+
+block styles
+
+block content
+  .container.mobile-search-result
+    .mobile-area 
+      p 
+        span 手机号：
+        span 186 1010 3214
+    .order-list
+      .panel.panel-default
+        .panel-heading
+          span.text-muted 已签收
+          span.pull-right 已评价
+        .panel-body
+          p 
+            span 运单号：
+            span 1107110222120
+          p 
+            span 发件人：
+            span 杨过 
+          p 
+            span 收件人：
+            span 大桶
+
+      .panel.panel-default
+        .panel-heading
+          span.text-success 配送中
+        .panel-body
+          p 
+            span 运单号：
+            span 1107110222120
+          p 
+            span 发件人：
+            span 杨过 
+          p 
+            span 收件人：
+            span 大桶
+
+    
+      .panel.panel-default
+        .panel-heading
+          span.text-danger 拒收
+          a(href="/",class="pull-right")
+            | 待评价
+        .panel-body
+          p 
+            span 运单号：
+            span 1107110222120
+          p 
+            span 发件人：
+            span 杨过 
+          p 
+            span 收件人：
+            span 大桶
+
+      .panel.panel-default
+        .panel-heading
+          span.text-danger 已签收
+          a(href="/",class="pull-right")
+            | 待评价
+
+        .panel-body
+          p 
+            span 运单号：
+            span 1107110222120
+          p 
+            span 发件人：
+            span 杨过 
+          p 
+            span 收件人：
+            span 大桶
+
+ 
+  

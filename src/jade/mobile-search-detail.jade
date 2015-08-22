@@ -1,0 +1,55 @@
+extends templates/master
+
+block vars
+
+block title
+  | 手机号结果列表
+
+block styles
+
+block content
+  .container.mobile-search-detail
+    .mobile-area 
+      p 
+        span 手机号：
+        span 186 1010 3214
+    .order-number
+      span 运单号：
+      span.number 110711022212 
+      span.status (已签收)
+      span 、 
+      span 发件人：
+      span.deliverior 国
+      span 、 
+      span 收件人：
+      span.receiver 国
+      span 、 
+      span 收获地址：
+      span 北京海淀区花园东街甲号院子1号楼1单元305室东街甲号院1号：
+      
+    ul.order-trace-list
+      li.active 
+        .circle
+        p
+          span.description 运单已送达
+          span &nbsp;
+          a(href="/") 配送员评价
+     
+          br
+          span.date 2015-6-3 12:12:12
+      li 
+        .circle
+        p
+          span.description 配送员配送中
+          span &nbsp;
+          a(href="/") 13812345678
+          br 
+          span.date 2015-6-3 12:12:12
+      li 
+        .circle
+        p
+          span.description 配送员配送中
+          span &nbsp;
+          a(href="/") 13812345678
+          br 
+          span.date 2015-6-3 12:12:12

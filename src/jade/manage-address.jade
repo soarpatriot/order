@@ -1,0 +1,27 @@
+extends templates/master
+
+block vars
+
+block title
+  | 手机号查询
+
+block styles
+
+block content
+  .container.manage-address 
+    a(href="",class="btn btn-grey btn-block") 添加新地址
+    
+    .address-list
+      - var aa = [1,2,3,4,5]
+      each val in aa
+        .panel.panel-default
+          .panel-heading
+            span  如风达
+            a(href="/",class="pull-right")
+              i.fa.fa-pencil-square-o
+          .panel-body
+            p 
+              span 骁
+              span 1288888888
+            p 
+              | 田径史

@@ -1,5 +1,6 @@
 
-
+.search-area
+  margin-top 40px
 
 .search-type
   margin 50px 0
@@ -21,10 +22,61 @@
     font-size 14px
     display inline-block
     width 50% 
-  .icon 
+  .mobile-icon 
     display block
     margin 0
     font-size 60px
+  .order-icon
+    display block
+    margin 0
+    font-size 48px
   .text 
     display block
+    
+    
+
+.mobile-search-result
+  margin 50px auto
+  .mobile-area
+    margin 0 0 30px 20px
+.mobile-search-detail
+  margin 50px auto
+  .order-number
+    margin 30px 0
+  .circle
+    position absolute 
+    border 3px solid #777
+    background transparent
+    border-radius 50%
+    left 0
+    width 18px
+    height 18px
+
+  .order-trace-list
+    relative()
+    unstyled-list()
+    li 
+      relative()
+      padding-left 30px
+    li+li:before 
+      content "  "
+      position absolute 
+      border 0 
+      background #777
+      top -29px
+      left 8px
+      width 2px
+      height 26px
+    .date
+      color #777
+      font-size 12px
+    .description 
+      color #777
+    .active
+      .circle 
+        border-color #3c763d 
+      .description
+        color #3c763d
+      .date
+        color #3c763d
 
