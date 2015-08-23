@@ -140,7 +140,7 @@ gulp.task "scripts", ->
 gulp.task "stylus", ->
     gulp.src Config.src + "stylus/main.styl"
     .pipe plugins.plumber()
-    .pipe plugins.stylus({use:bootstrap(),compress:true})
+    .pipe plugins.stylus({use:[bootstrap(),nib()],compress:true})
     .pipe plugins.autoprefixer "last 1 version", "> 1%"
     .pipe plugins.if Config.publish, plugins.minifyCss()
     .pipe plugins.rename "main.css"
