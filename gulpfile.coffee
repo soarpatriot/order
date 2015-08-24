@@ -187,7 +187,7 @@ readDir =  ->
 fileArray = readDir()
 
 gulp.task "sitemap", ->
-  gulp.src Config.root + "index.jade"
+  gulp.src Config.src + "jade/index.jade"
   .pipe plugins.plumber()
   # .pipe plugins.data(readDir)
   .pipe plugins.swig()

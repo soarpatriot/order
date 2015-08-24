@@ -1,0 +1,28 @@
+extends templates/master
+
+block vars
+
+block title
+  | 手机号查询
+
+block styles
+
+block content
+  .container 
+    .search-type 
+      .search-type-mobile.centered
+          a(href="/",class="active")
+            i.fa.fa-mobile.mobile-icon
+            span.text 手机号查询
+      .search-type-order.centered
+          a(href="/")
+            i.fa.fa-file.order-icon
+            span.text 运单号查询
+    form
+      .form-group
+        input(type="text",placeholder="请输入手机号",class="form-control")
+      .form-group
+        button(class="btn btn-success btn-verify") 获取验证码
+        input(type="text",placeholder="请输入验证码",class="form-control")
+      .form-group.search-area 
+        button(class="btn  btn-danger btn-block") 查询

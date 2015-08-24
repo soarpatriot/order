@@ -8,21 +8,14 @@ block title
 block styles
 
 block content
-  .container 
-    .search-type 
-      .search-type-mobile.centered
-          a(href="/",class="active")
-            i.fa.fa-mobile.mobile-icon
-            span.text 手机号查询
-      .search-type-order.centered
-          a(href="/")
-            i.fa.fa-file.order-icon
-            span.text 运单号查询
-    form
-      .form-group
-        input(type="text",placeholder="请输入手机号",class="form-control")
-      .form-group
-        button(class="btn btn-success btn-verify") 获取验证码
-        input(type="text",placeholder="请输入验证码",class="form-control")
-      .form-group.search-area 
-        button(class="btn  btn-danger btn-block") 查询
+  .container.index-page 
+    .list-group 
+      a(href="./add-address.html",class="list-group-item") 添加地址 
+      a(href="./modify-address.html",class="list-group-item") 修改地址 
+      a(href="./manage-address.html",class="list-group-item") 管理地址 
+      a(href="./send.html",class="list-group-item") 输入邮寄信息 
+      a(href="./delivery-confirm.html",class="list-group-item") 确认邮寄信息 
+      a(href="./mobile-search.html",class="list-group-item") 手机号查询 
+      a(href="./order-search.html",class="list-group-item") 订单号查询 
+      a(href="./mobile-search-detail.html",class="list-group-item") 手机查询详情 
+      a(href="./mobile-search-result.html",class="list-group-item") 手机查询结果 
