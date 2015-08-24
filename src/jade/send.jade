@@ -34,7 +34,7 @@ block content
             .col-xs-9
               textarea(class="form-control",row="3")
           .form-group.centered
-            a(href="#fee-search",data-toggle="collapse") 
+            a(href="#fee-search",data-toggle="collapse",class="fee-link") 
               span 运费&实效查询
               i.fa.fa-angle-down
               i.fa.fa-angle-up.hidden
@@ -61,18 +61,19 @@ block content
             .form-group
               label(class="col-xs-3 control-label") 预计重量： 
               .col-xs-9
-                input(type="text",class="form-control")
-            .row 
-              .col-xs-4
-                span 运费估计：
-                span 8元
-              .col-xs-4 
-                span 预计时间：
-                span 2天
-            p.small.text-muted
-              |  请输入为您估计
-              br
-              |  请输入为您估计
+                input(type="text",class="form-control",placeholder="kg")
+            .summary-area
+              .row 
+                .col-xs-4
+                  span 运费估计：
+                  span 8元
+                .col-xs-4 
+                  span 预计时间：
+                  span 2天
+              p.small.text-muted.tip
+                |  请输入收件人地址和重量为您估算价格
+                br
+                |  请输入收件地址为您估算到达时间
 
       .submit-area.container
         button(class="btn btn-danger btn-block") 提交订单

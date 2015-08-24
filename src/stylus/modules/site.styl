@@ -2,12 +2,7 @@
 // all the big global in site
 body
   font-size 14px
-  relative() 
   background-color $grey-lighter
-
-
-.main-content-margin
-  margin 40px auto
 
 
 
@@ -25,6 +20,23 @@ body
 .panel 
   border-radius 0
 
+.btn-danger 
+  background-color $red
+ 
+.btn-success 
+  background-color $green
+
+.panel-light 
+  .panel-heading
+    background-color $blue-lightest
+  .panel-body 
+    color $grey-dark-light
+ 
 
 .btn-grey
-  button-variant($grey-dark, $grey-lighter, $btn-default-border)
+  button-variant($grey-dark-light, $grey-lighter, $btn-default-border)
+
+.link-grey
+  color $grey-dark-light
+  +ActiveFocusHover()
+    color darken($grey-dark-light, 10%)

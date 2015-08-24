@@ -6,11 +6,10 @@
   margin 50px 0
   font-size 0
   a 
-     color $grey-dark
+     color $grey-dark-light
      display inline-block 
      +ActiveFocusHover()
        text-decoration none
-       color $grey-dark
     
   .active
     color $black
@@ -29,7 +28,8 @@
   .order-icon
     display block
     margin 0
-    font-size 48px
+    margin-bottom 8px
+    font-size 40px
   .text 
     display block
     
@@ -68,21 +68,24 @@
       left 8px
       width 2px
       height 26px
+    a 
+      color $blue
+      text-decoration underline
     .date
-      color #777
+      color $grey-dark-light
       font-size 12px
     .description 
-      color #777
+      color $grey-dark-light
     .active
       .circle 
-        border-color #3c763d 
+        border-color $green-heavy 
       .description
-        color #3c763d
+        color $green
       .date
-        color #3c763d
+        color $green
 
 .delivery-confirm
-  margin 40px auto 
+  margin 10px 0 40px 0 
   .sent 
     padding 20px 15px 
     //  background linear-gradient(top, 90% white, #777)
@@ -114,3 +117,16 @@
     background linear-gradient(bottom, 95% $grey-lighter, #a8a8a8)
   .submit-area
     margin-top 40px
+  .fee-link
+    color $grey-dark
+    +ActiveFocusHover()
+       text-decoration none
+       color $grey-dark
+ 
+  .summary-area
+    margin-top 20px
+    padding-top 10px
+    padding-left 10px
+  .tip 
+    color $grey-dark-light
+    margin-top 20px
