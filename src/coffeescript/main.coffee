@@ -1,7 +1,7 @@
 
 
 
-require "collapse"  
+require "collapse"
 
 
 
