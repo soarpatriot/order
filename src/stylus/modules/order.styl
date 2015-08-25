@@ -118,6 +118,12 @@
  
 .order-send
   margin 40px auto
+  .send-form
+    .form-label 
+      padding-right 0
+    .input-area
+      padding-left 0
+
   .collapsed
     .fa-angle-down
       display none !important
@@ -133,6 +139,7 @@
     background linear-gradient(bottom, 95% $grey-lighter, #a8a8a8)
   .submit-area
     margin-top 40px
+
   .fee-link
     color $grey-dark
     +ActiveFocusHover()
@@ -143,6 +150,19 @@
     margin-top 20px
     padding-top 10px
     padding-left 10px
+    .red-block
+      color $red
+      padding 5px
+
+  .locate
+    font-size 20px
+    width 100%
+    height 40px
+    line-height 40px
+    background-color $white
+    border 1px solid #ccc
+  .estimate 
+    border-right 1px solid $grey-dark-light
   .tip 
     color $grey-dark-light
     margin-top 20px

@@ -9,29 +9,33 @@ block styles
 
 block content
   .order-send 
-    form(class="form-horizontal")
+    form(class="form-horizontal send-form")
       .container
         .form-group
-          label(class="col-xs-3 control-label") 寄件人： 
-          .col-xs-9
+          label(class="col-xs-3 control-label form-label") 寄件&nbsp;&nbsp;&nbsp;人： 
+          .col-xs-9.input-area
+            input(type="text",class="form-control")
+        .form-group.input-area
+          label(class="col-xs-3 control-label form-label") 手机&nbsp;&nbsp;&nbsp;号： 
+          .col-xs-9.input-area
             input(type="text",class="form-control")
         .form-group
-          label(class="col-xs-3 control-label") 手机号： 
-          .col-xs-9
-            input(type="text",class="form-control")
+          label(class="col-xs-3 control-label form-label") 寄件地址： 
+          .col-xs-9.input-area
+            textarea(class="form-control",row="5",cols="10")
+            .locate.centered
+                a(href="") 
+                  i.fa.fa-map-marker
+
         .form-group
-          label(class="col-xs-3 control-label") 寄件地址： 
-          .col-xs-9
-            textarea(class="form-control",row="3")
-        .form-group
-          .col-xs-9
+          .col-xs-9.col-xs-offset-3.input-area
             a(href="#aa",class="btn btn-grey btn-block")
               span 从地址管理里添加
       .receive-part
         .container
           .form-group
-            label(class="col-xs-3 control-label") 备注： 
-            .col-xs-9
+            label(class="col-xs-3 control-label form-label") 备注： 
+            .col-xs-9.input-area
               textarea(class="form-control",row="3")
           .form-group.centered
             a(href="#fee-search",data-toggle="collapse",class="fee-link") 
@@ -41,35 +45,42 @@ block content
       #fee-search.collapse
         .container
           .form-group
-            label(class="col-xs-3 control-label") 寄件人： 
-            .col-xs-9
+            label(class="col-xs-3 control-label form-label") 寄件人： 
+            .col-xs-9.input-area
               input(type="text",class="form-control")
           .form-group
-            label(class="col-xs-3 control-label") 手机号： 
-            .col-xs-9
+            label(class="col-xs-3 control-label form-label") 手机号： 
+            .col-xs-9.input-area
               input(type="text",class="form-control")
           .form-group
-            label(class="col-xs-3 control-label") 寄件地址： 
-            .col-xs-9
+            label(class="col-xs-3 control-label form-label") 寄件地址： 
+            .col-xs-9.input-area
               textarea(class="form-control",row="3")
+              .locate.centered
+                a(href="") 
+                  i.fa.fa-map-marker
           .form-group
-            .col-xs-9
+            .col-xs-9.col-xs-offset-3.input-area
               a(href="#aa",class="btn btn-grey btn-block")
                 span 从地址管理里添加
         .weight-area
           .container
             .form-group
-              label(class="col-xs-3 control-label") 预计重量： 
-              .col-xs-9
+              label(class="col-xs-3 control-label form-label") 预计重量： 
+              .col-xs-9.input-area
                 input(type="text",class="form-control",placeholder="kg")
             .summary-area
               .row 
-                .col-xs-4
-                  span 运费估计：
-                  span 8元
-                .col-xs-4 
-                  span 预计时间：
-                  span 2天
+                .col-xs-6.estimate
+                  p.centered
+                    span 估计运费：
+                    span.red-block 8元
+                  p.small.text-muted.tip 最终价格已快递员报价为准
+                .col-xs-6 
+                  p.centered 
+                    span 预计时间：
+                    span.red-block 2天
+                  p.small.text-muted.tip 最终价格已快递员报价为准
               p.small.text-muted.tip
                 |  请输入收件人地址和重量为您估算价格
                 br
