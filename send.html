@@ -98,8 +98,21 @@
             </div>
           </div>
         </div>
-        <div class="submit-area container">
-          <button class="btn btn-danger btn-block">提交订单</button>
+        <div class="submit-area container"><a href="#form-modal" data-toggle="modal" data-target="#form-modal" class="btn btn-danger btn-block">提交订单</a></div>
+        <div class="container">
+          <div id="form-modal" class="modal fade">
+            <div class="modal-dialog"> 
+              <div class="modal-content"> 
+                <div class="modal-body centered">
+                  <p class="text-content">请再次核对订单信息，确认提交将不可取消。</p>
+                </div>
+                <div class="modal-footer"> 
+                  <div class="modal-btn-group"><a href="#close" data-dismiss="modal" class="link-grey">取消</a></div>
+                  <div class="modal-btn-group"><a href="#confirm" class="link-red">确定</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </form>
     </div>
