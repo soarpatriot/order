@@ -1,4 +1,7 @@
 
+.seach-icon
+  width 32px
+  margin 10px 0
 .search-area
   margin-top 40px
 
@@ -118,7 +121,11 @@
  
 .order-send
   margin 40px auto
-
+  .send-part 
+    background-image url('../images/send.png')
+    background-repeat no-repeat
+    background-size 100px 
+    background-position 2% 90%
   .collapsed
     .fa-angle-down
       display none !important
@@ -129,6 +136,12 @@
   .receive-part
     padding-top 30px
     background linear-gradient(bottom, 95% $grey-lighter, #a8a8a8)
+    &-receiver
+      background-image url('../images/receive.png')
+      background-repeat no-repeat
+      background-size 100px 
+      background-position 2% 90%
+
   .weight-area
     padding-top 30px
     background linear-gradient(bottom, 95% $grey-lighter, #a8a8a8)

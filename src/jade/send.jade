@@ -10,7 +10,7 @@ block styles
 block content
   .order-send 
     form(class="form-horizontal input-form")
-      .container
+      .container.send-part
         .form-group
           label(class="col-xs-3 control-label form-label") 寄&nbsp;&nbsp;件&nbsp;人： 
           .col-xs-9.input-area
@@ -25,12 +25,13 @@ block content
             textarea(class="form-control",row="5",cols="10")
             .locate.centered
                 a(href="",class="link-grey") 
-                  i.fa.fa-map-marker
+                  img(src="./images/locate.png",class="locate-icon")
 
         .form-group
           .col-xs-9.col-xs-offset-3.input-area
             a(href="#aa",class="btn btn-grey btn-block")
               span 从地址管理里添加
+
       .receive-part
         .container
           .form-group
@@ -43,7 +44,7 @@ block content
               i.fa.fa-angle-down
               i.fa.fa-angle-up.hidden
       #fee-search.collapse
-        .container
+        .container.receive-part-receiver
           .form-group
             label(class="col-xs-3 control-label form-label") 寄&nbsp;&nbsp;件&nbsp;人： 
             .col-xs-9.input-area
@@ -58,7 +59,7 @@ block content
               textarea(class="form-control",row="3")
               .locate.centered
                 a(href="",class="link-grey") 
-                  i.fa.fa-map-marker
+                  img(src="./images/locate.png",class="locate-icon")
           .form-group
             .col-xs-9.col-xs-offset-3.input-area
               a(href="#aa",class="btn btn-grey btn-block")
