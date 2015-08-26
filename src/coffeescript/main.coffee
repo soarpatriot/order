@@ -2,6 +2,7 @@
 
 
 require "collapse"
+require "modal"
 
 
 

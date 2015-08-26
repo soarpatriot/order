@@ -103,6 +103,12 @@ gulp.task "coffeescript", ->
                 exports: "collapse"
                 depends:
                     jQuery: "$"
+            modal:
+                path: Config.root + "bower_components/bootstrap/js/modal.js"
+                exports: "modal"
+                depends:
+                    jQuery: "$"
+
 
             scrollTo:
                 path: Config.node_modules_path + "jquery.scrollto/jquery.scrollto.js"

@@ -86,4 +86,18 @@ block content
                   p.small.text-muted.tip 最终价格已快递员报价为准
 
       .submit-area.container
-        button(class="btn btn-danger btn-block") 提交订单
+        a(href="#form-modal",class="btn btn-danger btn-block",data-toggle="modal",data-target="#form-modal") 提交订单
+
+      .container
+        #form-modal.modal.fade
+          .modal-dialog 
+            .modal-content 
+              .modal-body.centered
+                p.text-content
+                  | 请再次核对订单信息，确认提交将不可取消。
+              .modal-footer 
+                .modal-btn-group
+                  a(href="#close",class="link-grey",data-dismiss="modal") 取消
+                .modal-btn-group
+                  a(href="#confirm",class="link-red") 确定
+               
