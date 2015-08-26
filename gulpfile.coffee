@@ -109,6 +109,12 @@ gulp.task "coffeescript", ->
                 depends:
                     jQuery: "$"
 
+            tab:
+                path: Config.root + "bower_components/bootstrap/js/tab.js"
+                exports: "tab"
+                depends:
+                    jQuery: "$"
+
 
             scrollTo:
                 path: Config.node_modules_path + "jquery.scrollto/jquery.scrollto.js"

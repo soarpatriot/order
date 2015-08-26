@@ -1,14 +1,26 @@
 
-.seach-icon
+.search-icon
   width 32px
-  margin 10px 0
+  margin 10px auto
+  &-normal 
+    display block
+  &-active 
+    display none
 .search-area
   margin-top 40px
 
 .search-type
-  margin 50px 0
-  font-size 0
+  clearfix()
+  unstyled-list()
+  li 
+    padding 20px 0
+    fl()
+    width 50%
+    .text
+      display block
+      color $grey-dark-light
   a 
+     text-align center
      color $grey-dark-light
      display inline-block 
      +ActiveFocusHover()
@@ -16,6 +28,12 @@
     
   .active
     color $black
+    .search-icon-active
+      display block
+    .search-icon-normal
+      display none
+    .text
+      color $black
   &-mobile
     font-size 14px
     display inline-block

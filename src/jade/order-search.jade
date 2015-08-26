@@ -9,19 +9,33 @@ block styles
 
 block content
   .container 
-    .search-type 
-      .search-type-mobile.centered
-          a(href="/")
-            img(src="./images/mobile.png",class="seach-icon")
+    ul.search-type 
+     
+      li.centered
+          a(href="#mobile-tab",data-toggle="tab",class="tab-link")
+            img(src="./images/mobile.png",class="search-icon search-icon-normal")
+            img(src="./images/mobile-active.png",class="search-icon search-icon-active")
             span.text 手机号查询
-      .search-type-order.centered
-          a(href="/",class="active")
-            img(src="./images/order-active.png",class="seach-icon")
+      li.centered.active
+          a(href="#order-tab",data-toggle="tab",class="tab-link")
+            img(src="./images/order.png",class="search-icon search-icon-normal")
+            img(src="./images/order-active.png",class="search-icon search-icon-active")
             span.text 运单号查询
-    form
-      .form-group
-        input(type="text",placeholder="请输入运单号",class="form-control")
-      .form-group
-        button(class="btn  btn-grey btn-block") 扫一扫
-      .form-group.search-area 
-        button(class="btn  btn-danger btn-block") 查询
+    .tab-content 
+      #mobile-tab.tab-pane.active
+        form
+          .form-group
+            input(type="text",placeholder="请输入手机号",class="form-control")
+          .form-group
+            button(class="btn btn-success btn-verify") 获取验证码
+            input(type="text",placeholder="请输入验证码",class="form-control")
+          .form-group.search-area 
+            button(class="btn  btn-danger btn-block") 查询
+      #order-tab.tab-pane
+        form
+          .form-group
+            input(type="text",placeholder="请输入运单号",class="form-control")
+          .form-group
+            button(class="btn  btn-grey btn-block") 扫一扫
+          .form-group.search-area 
+            button(class="btn  btn-danger btn-block") 查询
