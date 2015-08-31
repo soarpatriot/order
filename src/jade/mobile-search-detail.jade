@@ -14,18 +14,38 @@ block content
         span 手机号：
         span 186 1010 3214
     .order-number
-      span 运单号：
-      span.number 110711022212 
-      span.status (已签收)
-      span 、 
-      span 发件人：
-      span.deliverior 国
-      span 、 
-      span 收件人：
-      span.receiver 国
-      span 、 
-      span 收获地址：
-      span 北京海淀区花园东街甲号院子1号楼1单元305室东街甲号院1号：
+      .panel.panel-default.panel-light-dark
+        .panel-heading
+          span.text-green 待入站 
+          a(href="/",class="pull-right link-grey")
+            i.fa.fa-retweet.retweet-icon
+        .panel-body
+          .media
+            .media-left
+              img(src="./images/head.png",class="thumbnail-head")
+            .media-body
+              p 
+                span 运单号：
+                span 1288888888
+              p 
+                span 取件人：
+                span 如风达百
+              p
+                span 商家： 
+                span 小酒窝电子科技有限公司
+      // 
+        span 运单号：
+        span.number 110711022212 
+        span.status (已签收)
+        span 、 
+        span 发件人：
+        span.deliverior 国
+        span 、 
+        span 收件人：
+        span.receiver 国
+        span 、 
+        span 收获地址：
+        span 北京海淀区花园东街甲号院子1号楼1单元305室东街甲号院1号：
       
     ul.order-trace-list
       li.active 
