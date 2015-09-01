@@ -68,20 +68,29 @@ block content
                 span.left-arrow.fa.fa-angle-right
         .weight-area
           .container
-            .row
-              .col-xs-6
-                .form-group
-                  label(class="col-xs-6 control-label form-label") 预计重量： 
-                  .col-xs-6.input-area
-                    input(type="text",class="form-control",placeholder="kg")
-              .col-xs-6
-                .form-group
-                  label(class="col-xs-6 control-label form-label") 取件时间： 
-                  .col-xs-6.input-area
-                    select.form-control
-                      option 今天
-                    select.form-control
-                      option 16:30
+            .form-group
+              label(class="col-xs-3 control-label form-label") 取件时间： 
+              .col-xs-3.input-area
+                select.form-control
+                  option 现在
+                  option 今天
+                  option 明天
+                  option 后天
+                  option 大后天
+              .col-xs-2.input-area
+                select.form-control
+                  each val in [9,10,11,12,13,14,15,16,17,18]
+                    option #{val}
+              .col-xs-1.input-area.time-comma
+                | :
+              .col-xs-2.input-area
+                select.form-control
+                  option 00
+                  option 30
+            .form-group
+              label(class="col-xs-3 control-label form-label") 预计重量： 
+              .col-xs-3.input-area
+                input(type="text",class="form-control",placeholder="kg")
             .summary-area
               .row 
                 .col-xs-6.estimate
