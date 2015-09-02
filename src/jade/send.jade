@@ -76,7 +76,6 @@ block content
                   option 今天
                   option 明天
                   option 后天
-                  option 大后天
               .col-xs-2.input-area
                 select.form-control
                   each val in [9,10,11,12,13,14,15,16,17,18]
@@ -91,6 +90,8 @@ block content
               label(class="col-xs-3 control-label form-label") 预计重量： 
               .col-xs-3.input-area
                 input(type="text",class="form-control",placeholder="kg")
+              .col-xs-6.error-tip.text-red
+                // error tip put here
             .summary-area
               .row 
                 .col-xs-6.estimate
