@@ -116,11 +116,7 @@ gulp.task "coffeescript", ->
                     jQuery: "$"
 
 
-            scrollTo:
-                path: Config.node_modules_path + "jquery.scrollto/jquery.scrollto.js"
-                exports: "scrollTo"
-                depends:
-                    jQuery: "$"
+
 
 
     .pipe plugins.if Config.publish, plugins.uglify()
