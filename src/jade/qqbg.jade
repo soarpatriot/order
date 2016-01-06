@@ -6,7 +6,7 @@ block styles
 
 block content
     .qqbg
-        #myCarousel.carousel.slide
+        #myCarousel.carousel.slide(data-ride="carousel")
             ol.carousel-indicators
                 li.active(data-target="#myCarousel", data-slide-to="0")
                 li(data-target="#myCarousel", data-slide-to="1")
@@ -55,5 +55,3 @@ block content
                             img(src="images/right.png", alt="亲情图" class="qqbg-display")
                             |我们离家的日子，他们还好吗？
     button(type="button").btn.qqbg-btn#qqbg-footer 寄一份心意给Ta
-    script.
-        $('#myCarousel').carousel('cycle')
