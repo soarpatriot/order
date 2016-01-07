@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="undefined">
+    <meta name="keywords" content="undefined">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="bower_components/Swiper/dist/css/swiper.min.css">
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </head>
+  <body>
+    <input type="text" value="18" id="demo">
+    <p id="test"></p>
+    <script>
+      var age,result;
+      age=document.getElementById("demo").value;
+      result=(age<18)?"small":"ok";
+      document.getElementById("test").innerHTML=result;
+      
+    </script>
+    <button onclick="myFunction()">点击</button>
+    <p id="testt"></p>
+    <script>
+      function myFunction(){
+          var x="";
+          var time=new Date().getHours();
+          if (time<11)
+          {
+              x="nice";
+            //- code
+          }
+          document.getElementById("testt").innerHTML=x;
+      }
+    </script>
+    <button onclick="mytest()">点击</button>
+    <p id="mytestt"></p>
+    <script>
+      function mytest()
+      {
+          var x="";
+          var time=new Date().getHours();
+          if (time<8)
+          {
+              x="good";
+            //- code
+          }
+          else if (time>=8 && time<10)
+          {
+              x="nice";
+            //- code
+          }
+          else
+          {
+              x="ev";
+          }
+          document.getElementById("mytestt").innerHTML=x;
+      }
+    </script>
+    <script>
+      var day=new Date().getDay();
+      switch(day)
+      {
+          case 0:
+              x="7";
+              break;
+          case 1:
+              x="1";
+              break;
+          case 2:
+              x="2";
+              break;
+          case 3:
+              x="3";
+              break;
+          case 4:
+              x="4";
+              break;
+          case 5:
+              x="5";
+              break;
+          default:
+              x="ok";
+              //- code
+      }
+      document.write(x)
+      
+    </script>
+    <script>
+      cars=["sun","wang","li"];
+      for(var i=0 ; i < cars.length ; i++){
+          document.write(cars[i]);
+      }
+    </script>
+    <script>
+      for( var i=0 ; i <5 ;i++)
+      {
+          document.write(i);
+      }
+    </script>
+    <script>
+      var y="";
+      var l=0;
+      while(l<5)
+      {
+          y="ok"+l;
+          l++;
+      }
+      document.write(y);
+    </script>
+    <script>
+      var x="",y=0;
+      do
+      {
+          x="<br>"+y+"ok";
+          y++;
+      }
+      while(y<6)
+      document.write(x);
+    </script>
+    <script>
+      for(var i=0;i<5;i++)
+      {
+          if (i>2)
+          {
+              break;
+            //- code
+          }
+          var x=x+"ok"+i;
+      }
+      document.write(x);
+    </script>
+    <p id="mytypeof"></p>
+    <script>
+      document.getElementById("mytypeof").innerHTML=typeof "wang"+"<br>"+typeof 12 +"<br>"+typeof {name,age}
+      var person;
+      document.getElementById("mytypeof").innerHTML=typeof person;
+      document.getElementById("mytypeof").innerHTML="wang".constructor;
+      var x=3;
+      document.getElementById("mytypeof").innerHTML=String(x)+"<br>"+String(123)+"<br>"+String(10+2)
+      document.getElementById("mytypeof").innerHTML=String(Date())
+      document.write(Number(false));
+      document.write(Number(true));
+      document.write("<br>"+Number(Date())+"<br>");
+      
+      var m=/r/;
+      document.write(m.test("there are"));
+      
+      
+    </script>
+    <script>
+      a=5;
+      b=3;
+      c=a+b;
+      console.log(c);
+      
+      
+    </script>
+    <script>
+      var x=1+1;
+      document.write(x);
+      
+      
+    </script>
+    <p id="mymax"></p>
+    <script>
+      function findMax(){
+          var max=0;
+          for(var i=0;i<arguments.length;i++)
+          {
+              if (arguments[i]>max)
+              {
+                  max=arguments[i];
+                //- code
+              }
+              return max;
+          }
+      }
+      document.getElementById("mymax").innerHTML=findMax(7,5,1);
+    </script>
+  </body>
+</html>
